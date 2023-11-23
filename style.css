@@ -1,16 +1,27 @@
 * {
-    margin: 0;
+   margin: 0;
 }
-
+header {
+    background-color:gainsboro;
+    display: flex;
+    justify-content: end;
+}
+button {
+    margin-right: 20px;
+}
 #planet {
-    font-size: 30px;
-    text-align: center;
+    width: 750px;
+    height: 350px;
+    border: 2px solid black;
     background-color:moccasin;
-    display:flex;
-    justify-content: center;
-    text-align: start;
+    display: flex;
 }
 
 #filter {
     background-color: lightblue;
+}
+div {
+    font-size: 30px;
+    border: 2px solid red;
+    text-align: start;
 }
