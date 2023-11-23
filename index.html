@@ -7,15 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="entrez une planète">
+    <label for="planet">
         Entrez une planète :
     </label>
-    <input type="text" id="Name" name="planet">
+    <input type="text" id="name" name="planet">
     <button type="button" onclick="research()">Go</button>
-    <script src="script.js"></script>
+
+    <label for="sort">
+        Trier par :
+    </label>
+    <input type="text" id="sort" name="planet">
+    <button type="button" onclick="sortBy()">Go</button>
+
     <p id="planet">
     </p>
     <p id="filter">
     </p>
+    <script src="script.js"></script>
 </body>
 </html>
