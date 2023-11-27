@@ -1,0 +1,114 @@
+* {
+   margin: 0;
+}
+header {
+    background-color:gainsboro;
+    display: flex;
+    justify-content: end;
+}
+button {
+    margin-right: 20px;
+}
+#planet {
+    width: 750px;
+    height: 350px;
+    border: 2px solid black;
+    background-color:moccasin;
+    display: flex;
+}
+
+#filter {
+    background-color: lightblue;
+}
+div {
+    font-size: 30px;
+    text-align: start;
+}
+
+
+/* à partir de là c'est nouveau */
+#system {
+    height: 320px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid black;
+}
+
+.title {
+    opacity: 0;
+    margin-bottom: 35px;
+}
+
+img {
+    transition-property:transform;
+    transition-duration: 1s;
+}
+
+img:hover {
+    transform: scale(1.5);   
+}
+
+.planet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planet:hover .title {
+    opacity: 1;
+}
+
+#titleEarth{
+    opacity: 0;
+}
+#titleMoon {
+    padding-left: 5px;
+    opacity: 0;
+}
+.planet:hover #titleEarth {
+    opacity: 1;
+}
+
+#satellite:hover #titleMoon {
+    opacity: 1;
+}
+
+#sun {
+    width: 160px;
+}
+#mercure {
+    width: 45px;
+}
+#venus {
+    width: 80px;
+}
+#satellite {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#earth {
+    width: 90px;
+}
+#moon {
+    width: 20px;
+}
+#mars {
+    width: 70px;
+}
+#jupiter {
+    width: 140px;
+}
+#saturn {
+    width: 210px;
+}
+#uranus {
+    width: 100px;
+}
+#neptune {
+    width: 80px;
+}
