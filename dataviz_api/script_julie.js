@@ -2,20 +2,18 @@ const research = () => {
 
   fetch(`https://api.le-systeme-solaire.net/rest/bodies/{${document.getElementById("name").value}}`).then(function (response) {
     if (response.ok) {
-      document.getElementById("planet").classList.add("visible")
-      // document.getElementById("planet").style.display = "block"
       return response.json()
     }
-    console.log("success!", response)
+    console.log("success!",response)
   })
 
     .then(data => {
       console.log(data)
-      document.getElementById("planet").innerHTML = "Nom : " + data.name + "<br>"
-      document.getElementById("planet").innerHTML += "Type : " + data.bodyType + "<br>"
-      document.getElementById("planet").innerHTML += "Température : " + data.avgTemp + " K°" + "<br>"
-      document.getElementById("planet").innerHTML += "Masse : " + data.mass.massValue.toFixed(2) * 10 ** data.mass.massExponent + "Kg" + "<br>"
-      document.getElementById("planet").innerHTML += "Lune.s : " + data.moons.length + "<br>"
+      document.getElementById("infos").innerHTML = "nom : " + data.name + "<br>"
+      document.getElementById("infos").innerHTML += "type : " + data.bodyType + "<br>"
+      document.getElementById("infos").innerHTML += "température : " + data.avgTemp + " K°" + "<br>"
+      document.getElementById("infos").innerHTML += "masse : " + data.mass.massValue.toFixed(2)*10**data.mass.massExponent + "Kg" + "<br>"
+      document.getElementById("infos").innerHTML += "lune.s : " + data.moons.length + "<br>"
 
     })
 }
@@ -27,7 +25,6 @@ let sortBy = () => {
     fetch("https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=name,avgTemp&order=avgTemp,asc")
       .then(function (response) {
         if (response.ok) {
-          document.getElementById("filter").classList.add("visible")
           return response.json()
         }
         console.log("success!", response)
@@ -43,7 +40,6 @@ let sortBy = () => {
     fetch("https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=name,bodyType&order=bodyType,asc")
       .then(function (response) {
         if (response.ok) {
-          document.getElementById("filter").classList.add("visible")
           return response.json()
         }
         console.log("success!", response)
@@ -59,7 +55,6 @@ let sortBy = () => {
     fetch("https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=name,moons")
       .then(function (response) {
         if (response.ok) {
-          document.getElementById("filter").classList.add("visible")
           return response.json();
         }
         console.log("success!", response);
@@ -73,9 +68,8 @@ let sortBy = () => {
         }
       });
   } else if (input == "distance") {
-    fetch("https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=name,perihelion,aphelion")
+    fetch("https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=name,perihelion,aphelion&order=aphelion,asc")
       .then(function (response) {
-        document.getElementById("filter").classList.add("visible")
         if (response.ok) {
           return response.json();
         }
@@ -90,9 +84,7 @@ let sortBy = () => {
         }
       });
   }
-
   else {
     document.getElementById("filter").innerHTML = "mot invalide"
   }
 }
-
