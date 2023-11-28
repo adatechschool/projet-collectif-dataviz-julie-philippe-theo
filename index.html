@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Doc Julie</title>
 </head>
 <body>
-    <label for="planet">
-        Entrez une planète :
-    </label>
-    <input type="text" id="name" name="planet">
-    <button type="button" onclick="research()">Go</button>
-
-    <label for="sort">
-        Trier par :
-    </label>
-    <input type="text" id="sort" name="planet">
-    <button type="button" onclick="sortBy()">Go</button>
+  <body>
+    <div class="input-container">
+      <label for="planet">Entrez une planète:</label>
+      <input type="text" style="background-color:lightblue; color:rgb(1, 1, 37)" id="name" name="planet">
+      <button type="button" style="background-color:lightblue; color:rgb(1, 1, 37)" onclick="research()">Go</button>
+  
+      <label for="sort">Trier par:</label>
+      <input type="text" style="background-color:lightblue; color:rgb(1, 1, 37)" id="sort" name="planet" focus>
+      <button type="button" style="background-color:lightblue; color:rgb(1, 1, 37)" onclick="sortBy()">Go</button>
 
     <p id="planet">
     </p>

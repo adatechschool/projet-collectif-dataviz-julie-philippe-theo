@@ -1,16 +1,131 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
-#planet {
-    font-size: 30px;
-    text-align: center;
-    background-color:moccasin;
-    display:flex;
-    justify-content: center;
-    text-align: start;
+@font-face { 
+  font-family: 'MyFont'; 
+  src: 
+      url('WAVY.otf')  
+      format('opentype'); 
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold; 
+  font-style: normal; 
+} 
+
+body {
+  background-image: url('file:///C:/Users/phili/Pictures/66315.jpg');
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold; 
+  color: lightblue;
+  height: 50px;
+  border-bottom: 8px double lightblue;
+  display: flex;
+  align-items: center; /* Mettre au centre vertical*/
+}
+
+.input-container {
+  display: flex;
+  align-items: center; /* Mettre au centre vertical*/
+  margin: 0 auto; /* Mettre au centre horizontal */
+}
+
+label, input, button {
+  margin: 5px; 
+}
+
+header {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold; 
+  color: lightblue;
+  /* background-color: gainsboro; */
+  border-bottom: 8px double lightblue;
+  display: flex;
+}
+
+button {
+  margin-right: 20px;
+}
+
+ #planet {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold; 
+  text-align: center;
+  border-radius: 25px;
+  border: 8px double lightblue;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: lightblue;
+  width: 250px;
+  height: 350px;
+  background-color:rgb(1, 1, 37, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  line-height: 4;
+  /* display: none; */
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
 }
 
 #filter {
-    background-color: lightblue;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold; 
+  text-align: center;
+  border-radius: 25px;
+  border: 8px double lightblue;
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: lightblue;
+  width: 250px;
+  height: 350px;
+  background-color:rgb(1, 1, 37, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  line-height: 2.5;
+  /* display: none; */
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
 }
+
+#planet.visible, #filter.visible {
+  opacity: 1; /* When the 'visible' class is added, set opacity to 1 */
+}
+
+button {
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  padding:5px;
+  border:none;
+  font-weight:600;
+  border-radius:5px;
+  width:15%;
+
+}
+
+input {
+  display:block;
+  width:100%;
+  margin:5px 0;
+  padding:3px;
+  border-radius:10px;
+  font-weight: bold; 
+} 
+
+/* 
+div {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  border: 2px solid lightblue;
+  text-align: start;
+} */
