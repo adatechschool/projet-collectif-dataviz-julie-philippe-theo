@@ -101,7 +101,12 @@ button {
   font-weight: 600;
   border-radius: 5px;
   width: 15%;
+  box-shadow: 3px 3px rgb(63, 77, 82),  -2px -2px 5px rgb(58, 65, 69)inset, 2px 2px 5px rgb(249, 249, 249)inset;
+}
 
+button:hover {
+  transform: translateX(3px);
+  box-shadow: 5px 5px 5px rgb(55, 63, 66) inset;
 }
 
 input {
@@ -111,6 +116,7 @@ input {
   padding: 3px;
   border-radius: 10px;
   font-weight: bold;
+  box-shadow: 2px 2px 5px rgb(58, 65, 69)inset;
 }
 
 #system {
